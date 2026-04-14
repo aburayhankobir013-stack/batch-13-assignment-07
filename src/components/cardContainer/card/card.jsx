@@ -1,11 +1,13 @@
 import Image from "next/image";
+import Link from "next/link";
 
 
 function Card({person}){
   return(
-    <div className="h-fit flex flex-col items-center gap-2 p-2 rounded-xs shadow-md">
-      <figure className="relative w-25 h-25">
-        <Image src={person.picture} alt="Image of a man" fill className="object-cover rounded-full shadow-md"/>
+    <Link href={`individualPerson/${person.id}`}>
+      <div className="h-fit flex flex-col items-center gap-2 p-2 rounded-xs shadow-md">
+      <figure>
+        <Image src={person.picture} alt="Image of a man" width={150} height={150} className="rounded-xs" />
       </figure>
       <h1 className="font-bold text-xl">
         {person.name}
@@ -22,6 +24,7 @@ function Card({person}){
         </div>
       </div>
     </div>
+    </Link>
   );
 }
 
