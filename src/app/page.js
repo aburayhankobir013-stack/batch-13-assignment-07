@@ -5,7 +5,7 @@ import CardContainer from "../components/cardContainer/cardContainer";
 
 function Home(){
   return(
-    <div>
+    <div className="min-h-screen flex flex-col">
       <HeroSection />
       <TrackingCard />
       <CardContainer />

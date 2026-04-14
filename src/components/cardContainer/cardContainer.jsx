@@ -3,7 +3,7 @@ import Card from "./card/card";
 
 function CardContainer(){
   return(
-    <div className="flex-1">
+    <div className="flex-1 border">
       <Card />
     </div>
   );
