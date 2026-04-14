@@ -2,11 +2,11 @@
   {
     "id": 1,
     "name": "John Doe",
-    "picture": "../assets/friend-01.jpg",
+    "picture": "/assets/friend-01.jpg",
     "email": "john@example.com",
     "days_since_contact": 12,
     "status": "overdue",
-    "tags": ["college"],
+    "tags": "college",
     "bio": "Met in university. Love hiking together.",
     "goal": 14,
     "next_due_date": "2025-07-20"
@@ -14,11 +14,11 @@
   {
     "id": 2,
     "name": "Michael Smith",
-    "picture": "../assets/friend-02.jpg",
+    "picture": "/assets/friend-02.jpg",
     "email": "michael@example.com",
     "days_since_contact": 10,
     "status": "almost due",
-    "tags": ["office"],
+    "tags": "office",
     "bio": "Colleague from previous job.",
     "goal": 14,
     "next_due_date": "2025-07-18"
@@ -26,11 +26,11 @@
   {
     "id": 3,
     "name": "David Johnson",
-    "picture": "../assets/friend-03.jpg",
+    "picture": "/assets/friend-03.jpg",
     "email": "david@example.com",
     "days_since_contact": 5,
     "status": "on-track",
-    "tags": ["gym"],
+    "tags": "gym",
     "bio": "Workout partner.",
     "goal": 14,
     "next_due_date": "2025-07-25"
@@ -38,11 +38,11 @@
   {
     "id": 4,
     "name": "Chris Brown",
-    "picture": "../assets/friend-04.jpg",
+    "picture": "/assets/friend-04.jpg",
     "email": "chris@example.com",
     "days_since_contact": 15,
     "status": "overdue",
-    "tags": ["school"],
+    "tags": "school",
     "bio": "Old school friend.",
     "goal": 14,
     "next_due_date": "2025-07-15"
@@ -50,11 +50,11 @@
   {
     "id": 5,
     "name": "James Wilson",
-    "picture": "../assets/friend-05.jpg",
+    "picture": "/assets/friend-05.jpg",
     "email": "james@example.com",
     "days_since_contact": 11,
     "status": "almost due",
-    "tags": ["family"],
+    "tags": "family",
     "bio": "Cousin brother.",
     "goal": 14,
     "next_due_date": "2025-07-19"
@@ -62,11 +62,11 @@
   {
     "id": 6,
     "name": "Robert Taylor",
-    "picture": "../assets/friend-06.jpg",
+    "picture": "/assets/friend-06.jpg",
     "email": "robert@example.com",
     "days_since_contact": 3,
     "status": "on-track",
-    "tags": ["business"],
+    "tags": "business",
     "bio": "Business partner.",
     "goal": 14,
     "next_due_date": "2025-07-28"
@@ -74,11 +74,11 @@
   {
     "id": 7,
     "name": "Daniel Anderson",
-    "picture": "../assets/friend-07.jpg",
+    "picture": "/assets/friend-07.jpg",
     "email": "daniel@example.com",
     "days_since_contact": 20,
     "status": "overdue",
-    "tags": ["neighbor"],
+    "tags": "neighbor",
     "bio": "Lives next door.",
     "goal": 14,
     "next_due_date": "2025-07-10"
@@ -86,11 +86,11 @@
   {
     "id": 8,
     "name": "Matthew Thomas",
-    "picture": "../assets/friend-08.jpg",
+    "picture": "/assets/friend-08.jpg",
     "email": "matthew@example.com",
     "days_since_contact": 13,
     "status": "almost due",
-    "tags": ["college"],
+    "tags": "college",
     "bio": "Batchmate.",
     "goal": 14,
     "next_due_date": "2025-07-21"
@@ -98,11 +98,11 @@
   {
     "id": 9,
     "name": "Anthony Harris",
-    "picture": "../assets/friend-09.jpg",
+    "picture": "/assets/friend-09.jpg",
     "email": "anthony@example.com",
     "days_since_contact": 7,
     "status": "on-track",
-    "tags": ["travel"],
+    "tags": "travel",
     "bio": "Travel buddy.",
     "goal": 14,
     "next_due_date": "2025-07-26"
@@ -110,11 +110,11 @@
   {
     "id": 10,
     "name": "Mark Clark",
-    "picture": "../assets/friend-10.jpg",
+    "picture": "/assets/friend-10.jpg",
     "email": "mark@example.com",
     "days_since_contact": 16,
     "status": "overdue",
-    "tags": ["office"],
+    "tags": "office",
     "bio": "Team lead.",
     "goal": 14,
     "next_due_date": "2025-07-14"
@@ -122,11 +122,11 @@
   {
     "id": 11,
     "name": "Steven Lewis",
-    "picture": "../assets/friend-11.jpg",
+    "picture": "/assets/friend-11.jpg",
     "email": "steven@example.com",
     "days_since_contact": 9,
     "status": "almost due",
-    "tags": ["club"],
+    "tags": "club",
     "bio": "Book club member.",
     "goal": 14,
     "next_due_date": "2025-07-22"
@@ -134,11 +134,11 @@
   {
     "id": 12,
     "name": "Paul Walker",
-    "picture": "../assets/friend-12.jpg",
+    "picture": "/assets/friend-12.jpg",
     "email": "paul@example.com",
     "days_since_contact": 2,
     "status": "on-track",
-    "tags": ["friend"],
+    "tags": "friend",
     "bio": "Childhood friend.",
     "goal": 14,
     "next_due_date": "2025-07-29"
