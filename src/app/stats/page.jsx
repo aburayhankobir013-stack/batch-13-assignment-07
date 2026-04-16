@@ -2,9 +2,9 @@
 
 function StatsPage(){
   return(
-    <h1>
-      I am stats page!
-    </h1>
+    <div className="flex-1 bg-green-500">
+      I am stats page
+    </div>
   );
 }
 

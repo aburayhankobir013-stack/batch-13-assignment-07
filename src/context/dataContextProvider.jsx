@@ -1,7 +1,6 @@
 "use client";
-import dataContext from "./dataContext";
 import { useState,useEffect } from "react";
-
+import dataContext from "./dataContext";
 
 function DataContextProvider({children}){
   const[persons,setPersons]=useState([]);

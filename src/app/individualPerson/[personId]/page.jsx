@@ -1,5 +1,6 @@
 "use client";
-import {use, useEffect, useState } from "react";
+import { use, useEffect, useState, useContext } from "react";
+import timelineContex from "@/context/timelineContext";
 import Image from "next/image";
 import { HiOutlineBellSnooze } from "react-icons/hi2";
 import { FiArchive } from "react-icons/fi";
@@ -9,22 +10,76 @@ import text from "../../../assets/text.png";
 import video from "../../../assets/video.png";
 
 function PersonInformation({ params }) {
-  const [persons,setPersons]=useState([]);
+  const {setTimeline } = useContext(timelineContex);
+  const [persons, setPersons] = useState([]);
   const { personId } = use(params);
-  useEffect(()=>{
-    const fetchData=async ()=>{
-      const response=await fetch("/database/data.json");
-      const useAbleData=await response.json();
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch("/database/data.json");
+      const useAbleData = await response.json();
       setPersons(useAbleData);
-    }
+    };
     fetchData();
-  },[]);
+  }, []);
   const foundedPerson = persons.find(
     (person) => person.id === parseInt(personId),
   );
   if (!foundedPerson) {
     return;
   }
+  const createTimeline = (method) => {
+    if (method === "call") {
+      setTimeline((prev) => [
+        ...prev,
+        {
+          name: foundedPerson.name,
+          method: method,
+          date: new Date().toLocaleDateString(
+            "en-US",
+            {
+              month: "short",
+              day: "numeric",
+              year: "numeric",
+            },
+          ),
+        },
+      ]);
+    }
+    if (method === "text") {
+      setTimeline((prev) => [
+        ...prev,
+        {
+          name: foundedPerson.name,
+          method: method,
+          date: new Date().toLocaleDateString(
+            "en-US",
+            {
+              month: "short",
+              day: "numeric",
+              year: "numeric",
+            },
+          ),
+        },
+      ]);
+    }
+    if (method === "video") {
+      setTimeline((prev) => [
+        ...prev,
+        {
+          name: foundedPerson.name,
+          method: method,
+          date: new Date().toLocaleDateString(
+            "en-US",
+            {
+              month: "short",
+              day: "numeric",
+              year: "numeric",
+            },
+          ),
+        },
+      ]);
+    }
+  };
   return (
     <div className="flex h-fit flex-col md:flex-row gap-2 p-2">
       {/* Left container */}
@@ -121,15 +176,24 @@ function PersonInformation({ params }) {
             Quick Check-In
           </h1>
           <div className="flex justify-between gap-2 items-center">
-            <button className="flex-1 flex items-center flex-col gap-3 p-5 rounded-xs shadow-[0_0_5px_rgba(0,0,0,0.2)] bg-slate-100 cursor-pointer font-bold">
+            <button
+              className="flex-1 flex items-center flex-col gap-3 p-5 rounded-xs shadow-[0_0_5px_rgba(0,0,0,0.2)] bg-slate-100 cursor-pointer font-bold"
+              onClick={() => createTimeline("call")}
+            >
               <Image src={call} alt="Call icon" width={20} height={20} />
               <span>Call</span>
             </button>
-            <button className="flex-1 flex items-center flex-col gap-3 p-5 rounded-xs shadow-[0_0_5px_rgba(0,0,0,0.2)] bg-slate-100 cursor-pointer font-bold">
+            <button
+              className="flex-1 flex items-center flex-col gap-3 p-5 rounded-xs shadow-[0_0_5px_rgba(0,0,0,0.2)] bg-slate-100 cursor-pointer font-bold"
+              onClick={() => createTimeline("text")}
+            >
               <Image src={text} alt="Text icon" width={20} height={20} />
               <span>Text</span>
             </button>
-            <button className="flex-1 flex items-center flex-col gap-3 p-5 rounded-xs shadow-[0_0_5px_rgba(0,0,0,0.2)] bg-slate-100 cursor-pointer font-bold">
+            <button
+              className="flex-1 flex items-center flex-col gap-3 p-5 rounded-xs shadow-[0_0_5px_rgba(0,0,0,0.2)] bg-slate-100 cursor-pointer font-bold"
+              onClick={() => createTimeline("video")}
+            >
               <Image src={video} alt="Video icon" width={20} height={20} />
               <span>Video</span>
             </button>
