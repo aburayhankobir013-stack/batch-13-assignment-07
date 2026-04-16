@@ -1,240 +1,228 @@
 # 👥 KeenKeeper — Keep Your Friendships Alive
 
-### 📅 Deadline For 60 marks: 17 April 2026 | ⏱️11:59PM
-### 📅 Deadline for 30 marks: Any time after 17 April 2026
+## 📌 Project Overview
+
+**KeenKeeper** is a modern friendship management web application built with **Next.js**. It helps users maintain meaningful relationships by tracking interactions, reminding when to reconnect, and visualizing communication patterns.
+
+This project demonstrates real-world frontend development skills including dynamic routing, global state management, responsive UI design, and interactive user experiences.
 
 ---
 
-## 🐣 Basic Requirements (Must Do for Everyone)
+## 🚀 Live Links
 
-- Your app must work on **all screen sizes** — mobile, tablet, and desktop
-- Make at least **8 Git commits** with clear, meaningful messages (e.g., "added friend card component")
-- Your app must run without any errors after deployment
-- Add a nice `README.md` file with your project name, description, technologies used, and features
+* 🌐 Live Site: https://batch-13-assignment-07.vercel.app/
+* 💻 GitHub Repo: https://github.com/aburayhankobir013-stack/batch-13-assignment-07
 
 ---
 
-## 🔧 Main Requirements — 50 Marks
+## 🛠️ Technologies Used
+
+* **Next.js (App Router)**
+* **React.js**
+* **Tailwind CSS**
+* **DaisyUI / Component Library**
+* **Recharts (for analytics)**
+* **React Toast (for notifications)**
 
 ---
 
-### 1. 🔝 Navbar
+## ✨ Key Features
 
-**Navbar:**
-- Design the Navbar exactly like the Figma design
-- Put your **logo on the left side**
-- Put your **navigation links on the right side** — links are: **Home**, **Timeline**, **Stats**
-- Each link should have an **icon** next to the text
-- The **active page link** should look different (highlighted), just like the Figma design
+### 🔹 1. Responsive Navbar
 
----
-
-### 2. 🎯 Banner
-
-**Banner Section (Top of the Home page):**
-- Show a centered **title** and **subtitle**
-- Add a **button with an icon** (e.g., "Add a Friend")
-- Show **4 summary cards below the banner**, following the Figma design
+* Fully responsive navigation bar
+* Includes **Home**, **Timeline**, and **Stats** pages
+* Active route highlighting
+* Icons included with each navigation link
 
 ---
 
-### 3. 📋 Friend Data (JSON File)
+### 🔹 2. Hero Banner & Summary
 
-Create a file (e.g., `friends.json`) with **6–10 realistic friend profiles**.  
-Each friend object must have these fields:
-```json
-{
-  "id": 1,
-  "name": "John Doe",
-  "picture": "https://example.com/photo.jpg",
-  "email": "john@example.com",
-  "days_since_contact": 12,
-  "status": "overdue",
-  "tags": ["college", "close friend"],
-  "bio": "Met in university. Love hiking together.",
-  "goal": 14,
-  "next_due_date": "2025-07-20"
-}
+* Centered **title and subtitle**
+* CTA button (e.g., *Add a Friend*)
+* 4 summary cards showing key friendship stats
+
+---
+
+### 🔹 3. Friend Management System
+
+* Data stored in a local **JSON file**
+* Each friend includes:
+
+  * Profile image, name, email
+  * Contact frequency tracking
+  * Tags, bio, and relationship goal
+
+---
+
+### 🔹 4. Friends Grid (Home Page)
+
+* Displays all friends in a **responsive grid layout**
+* Each card shows:
+
+  * Profile picture
+  * Name & tags
+  * Days since last contact
+  * Status indicator (Overdue / Almost Due / On Track)
+* Clicking a card navigates to the **Friend Details Page**
+
+---
+
+### 🔹 5. Friend Details Page
+
+#### 📌 Left Section:
+
+* Profile information (image, name, email, bio)
+* Status with color indicator
+* Action buttons:
+
+  * Snooze
+  * Archive
+  * Delete *(UI only)*
+
+#### 📌 Right Section:
+
+* 📊 Stats Cards (Days, Goal, Next Due Date)
+* 🎯 Relationship Goal Card with edit option
+* ⚡ Quick Check-In:
+
+  * Call 📞
+  * Text 💬
+  * Video 🎥
+
+✅ Clicking these buttons:
+
+* Adds a new entry to the timeline
+* Shows a **toast notification**
+
+---
+
+### 🔹 6. Timeline Page
+
+* Displays all interaction history
+* Each entry includes:
+
+  * Date
+  * Interaction type icon
+  * Title (e.g., *Call with John*)
+
+#### 🔍 Filtering (Challenge Feature)
+
+* Filter timeline by:
+
+  * Call
+  * Text
+  * Video
+
+---
+
+### 🔹 7. Friendship Analytics (Stats Page)
+
+* Visual representation using **Pie Chart**
+* Shows distribution of:
+
+  * Calls
+  * Texts
+  * Video interactions
+
+---
+
+### 🔹 8. Error Handling & UX Enhancements
+
+* ✅ Custom **404 Not Found Page**
+* ⏳ Loading animation during data fetch
+* 🔔 Toast notifications for user actions
+* 🔄 Page reload works without breaking (important for deployment)
+
+---
+
+### 🔹 9. Fully Responsive Design
+
+* Mobile 📱
+* Tablet 📲
+* Desktop 💻
+  Ensures smooth experience across all devices
+
+---
+
+## 📂 Project Structure
+
+```bash
+/app
+  /components
+  /context
+  /timeline
+  /stats
+  /friends
+  /not-found
+/public
+  /assets
+/database
+  friends.json
 ```
 
-> ⚠️ Use meaningful data. No "lorem ipsum" or fake placeholder text.  
-> The `status` field can only be one of: `"overdue"` | `"almost due"` | `"on-track"`  
-> 💡 You may use an AI tool to help generate the JSON data.
+---
+
+## ⚙️ Installation & Setup
+
+1️⃣ Clone the repository:
+
+```bash
+git clone <your-repo-link>
+```
+
+2️⃣ Go to project directory:
+
+```bash
+cd keenkeeper
+```
+
+3️⃣ Install dependencies:
+
+```bash
+npm install
+```
+
+4️⃣ Run the development server:
+
+```bash
+npm run dev
+```
 
 ---
 
-### 4. 👫 Your Friends Section (Home Page)
+## 📊 Challenge Features Implemented
 
-- Display all friends from your JSON file as cards, following the Figma design
-- **Each card must show:**
-
-| Field | Details |
-|---|---|
-| 📸 Picture | Friend's photo |
-| 🧑 Name | Friend's full name |
-| 📅 Days Since Contact | How many days ago you contacted them |
-| 🏷️ Tags | e.g., "college", "work" |
-| 🔴 Status | Background color changes based on status (match Figma) |
-
-- Cards must be shown in a **4-column grid layout on large screens**
-- Clicking a card must navigate the user to that friend's **Detail Page**
+* ✅ Timeline filtering system
+* ✅ Friendship analytics with charts
+* ✅ Clean and structured README
 
 ---
 
-### 5. 👤 Friend Details Page — Layout
+## 🌟 Future Improvements
 
-This page should have a **two-column layout** (follow the Figma design).
-
-**Left Column — Friend Info Card:**
-
-Show the following details:
-- Profile picture
-- Name
-- Status (with color)
-- Tags
-- Bio
-- Email
-
-Also add these **3 action buttons** (no functionality required for these buttons):
-
-| Button |
-|---|
-| ⏰ Snooze 2 Weeks |
-| 📦 Archive |
-| 🗑️ Delete |
+* 🔐 Add authentication system
+* ☁️ Connect to a real database (MongoDB/Firebase)
+* 🔍 Add search functionality
+* 🔄 Sort timeline entries (newest/oldest)
 
 ---
 
-**Right Column — 3 sections:**
+## 👨‍💻 Author
 
-**① Stats Cards (show 3 cards):**
-- Days Since Contact
-- Goal (in days)
-- Next Due Date
-
-**② Relationship Goal Card:**
-- Show the current contact goal
-- Add an **Edit** button
-
-**③ Quick Check-In Card:**
-- Add 3 buttons with icons: **Call**, **Text**, **Video**
-- When clicked, each button adds a new entry to the **Timeline** (see Section 6)
+**Your Name**
 
 ---
 
-### 6. ⚡ Friend Details Page — Button Functionality
+## 📄 License
 
-When a user clicks **Call**, **Text**, or **Video** in the Quick Check-In Card:
-
-✅ A **new timeline entry** is automatically added with:
-- The **current date**
-- A **title** like:
-  - "Call with Alex Johnson"
-  - "Text with Alex Johnson"
-  - "Video with Alex Johnson"
-
-✅ A **toast notification** must appear when any of these buttons is clicked.
-
-
+This project is created for academic and learning purposes.
 
 ---
 
-### 7. 📜 Timeline Page
+## 💡 Final Note
 
-This page shows the **history of all interactions** (calls, texts, video calls) logged from the Friend Details page.
-
-**This page must have:**
-- A **"Timeline"** heading at the top
-- Timeline entries displayed following the Figma design
-- Each entry must show:
-
-| Field | Details |
-|---|---|
-| 📅 Date | When the interaction happened |
-| 🔣 Icon | Different icon for Call / Text / Video |
-| 📝 Title | e.g., "Call with Sarah", "Text with Mike" |
+KeenKeeper is designed to encourage meaningful human connections in a digital world. It combines productivity with emotional intelligence — helping users never lose touch with the people who matter most.
 
 ---
-
-### 8. 🦶 Footer
-
-- Design and add a footer section that matches the Figma design
-
----
-
-### 9. 📱 Responsive Design
-
-- The entire website must work correctly on **mobile, tablet, and desktop** screen sizes
-
----
-
-### 10. 🛠️ Other Requirements(Required for marks)
-
-| # | Requirement |
-|---|---|
-| 10.1 | Add a **404 Page** for any unknown/invalid route |
-| 10.2 | Show a **loading animation** while the friends data is being fetched on the Home page |
-| 10.3 | Show a **relevant toast notification** when the user clicks Call, Text, or Video |
-| 10.4 | Make sure **reloading any page after deployment** does not cause an error |
-
----
-
-## 🚀 Challenge Requirements — 10 Marks
-
----
-
-### C1. 📊 Friendship Analytics Page (Stats Page)
-
-- The page must have a **"Friendship Analytics"** heading at the top
-- Add a **Pie Chart** (using Recharts) showing the count of **Call / Text / Video** interactions — match the Figma layout
-
----
-
-### C2. 🔍 Timeline Filter
-
-- Add **filter options** on the Timeline page so users can filter entries by: **Call**, **Text**, or **Video**
-
----
-
-### C3. 📄 GitHub README
-
-Add a well-designed `README.md` to your GitHub repository that includes:
-- Name of your project
-- A short description
-- Technologies you used
-- 3 key features of your project
-
----
-
-## ⭐ Optional (No Marks — Highly Recommended)
-
-These are not required but will make your project stand out:
-
-- **Sort** timeline entries by date (newest / oldest)
-- **Search** timeline entries by friend name or interaction type
-
----
-
-## 🛠️ Technologies to Use
-
-| Technology | Purpose |
-|---|---|
-| **React.js/Next.js** | Build the UI |
-| **React Router DOM/App router(Next.js)** | Handle page navigation |
-| **Tailwind CSS+Any component library** | Styling and responsiveness |
-| **Recharts** | Chart |
-
----
-
-## 🚀 Deployment
-
-Deploy your project on **Vercel**, **Netlify**, **Cloudflare Pages**, or anywhere else before submitting.
-
----
-
-## 📬 Submission
-
-Fill in both links before submitting:
-
-- **Live Link**:
-- **GitHub Repository Link**:
