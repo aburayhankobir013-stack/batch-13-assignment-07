@@ -8,9 +8,10 @@ import { RiDeleteBin6Line } from "react-icons/ri";
 import call from "../../../assets/call.png";
 import text from "../../../assets/text.png";
 import video from "../../../assets/video.png";
+import { toast } from "react-toastify";
 
 function PersonInformation({ params }) {
-  const {setTimeline } = useContext(timelineContex);
+  const { setTimeline } = useContext(timelineContex);
   const [persons, setPersons] = useState([]);
   const { personId } = use(params);
   useEffect(() => {
@@ -27,55 +28,52 @@ function PersonInformation({ params }) {
   if (!foundedPerson) {
     return;
   }
-  const createTimeline = (method) => {
+  const createTimeline = (method, currentPerson) => {
     if (method === "call") {
+      const notify = () => toast(`Call with ${currentPerson.name}`,{className});
+      notify();
       setTimeline((prev) => [
         ...prev,
         {
           name: foundedPerson.name,
           method: method,
-          date: new Date().toLocaleDateString(
-            "en-US",
-            {
-              month: "short",
-              day: "numeric",
-              year: "numeric",
-            },
-          ),
+          date: new Date().toLocaleDateString("en-US", {
+            month: "short",
+            day: "numeric",
+            year: "numeric",
+          }),
         },
       ]);
     }
     if (method === "text") {
+      const notify = () => toast(`Text with ${currentPerson.name}`);
+      notify();
       setTimeline((prev) => [
         ...prev,
         {
           name: foundedPerson.name,
           method: method,
-          date: new Date().toLocaleDateString(
-            "en-US",
-            {
-              month: "short",
-              day: "numeric",
-              year: "numeric",
-            },
-          ),
+          date: new Date().toLocaleDateString("en-US", {
+            month: "short",
+            day: "numeric",
+            year: "numeric",
+          }),
         },
       ]);
     }
     if (method === "video") {
+      const notify = () => toast(`Video with ${currentPerson.name}`);
+      notify();
       setTimeline((prev) => [
         ...prev,
         {
           name: foundedPerson.name,
           method: method,
-          date: new Date().toLocaleDateString(
-            "en-US",
-            {
-              month: "short",
-              day: "numeric",
-              year: "numeric",
-            },
-          ),
+          date: new Date().toLocaleDateString("en-US", {
+            month: "short",
+            day: "numeric",
+            year: "numeric",
+          }),
         },
       ]);
     }
@@ -178,21 +176,21 @@ function PersonInformation({ params }) {
           <div className="flex justify-between gap-2 items-center">
             <button
               className="flex-1 flex items-center flex-col gap-3 p-5 rounded-xs shadow-[0_0_5px_rgba(0,0,0,0.2)] bg-slate-100 cursor-pointer font-bold"
-              onClick={() => createTimeline("call")}
+              onClick={() => createTimeline("call", foundedPerson)}
             >
               <Image src={call} alt="Call icon" width={20} height={20} />
               <span>Call</span>
             </button>
             <button
               className="flex-1 flex items-center flex-col gap-3 p-5 rounded-xs shadow-[0_0_5px_rgba(0,0,0,0.2)] bg-slate-100 cursor-pointer font-bold"
-              onClick={() => createTimeline("text")}
+              onClick={() => createTimeline("text", foundedPerson)}
             >
               <Image src={text} alt="Text icon" width={20} height={20} />
               <span>Text</span>
             </button>
             <button
               className="flex-1 flex items-center flex-col gap-3 p-5 rounded-xs shadow-[0_0_5px_rgba(0,0,0,0.2)] bg-slate-100 cursor-pointer font-bold"
-              onClick={() => createTimeline("video")}
+              onClick={() => createTimeline("video", foundedPerson)}
             >
               <Image src={video} alt="Video icon" width={20} height={20} />
               <span>Video</span>
