@@ -11,7 +11,7 @@ import { usePathname } from "next/navigation";
 function NavBar(){
   const pathname=usePathname();
   return(
-    <header className="px-4 py-2 shadow-md">
+    <header className="px-4 py-2 shadow-md sticky top-0 bg-slate-100">
       <nav className="flex flex-col items-center gap-2 xl:flex-row justify-between">
         <figure>
           <Image src={logo} alt="logo image" width={141} height={31} />

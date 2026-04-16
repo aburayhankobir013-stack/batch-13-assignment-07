@@ -25,7 +25,7 @@ function TimelinePage() {
     }
   }
   return (
-    <div className="flex-1 flex flex-col gap-3">
+    <div className="flex-1 flex flex-col gap-3 mb-5">
       <h1 className="font-bold text-2xl">Timeline</h1>
       <select className="px-2 py-1 shadow-[0_0_5px_rgba(0,0,0,0.2)] rounded-xs self-start font-bold text-slate-600" onChange={(event)=>filter(event.target.value)}>
         <option value="">Filter timeline</option>

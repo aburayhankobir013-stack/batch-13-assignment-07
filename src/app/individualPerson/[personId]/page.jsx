@@ -30,7 +30,7 @@ function PersonInformation({ params }) {
   }
   const createTimeline = (method, currentPerson) => {
     if (method === "call") {
-      const notify = () => toast(`Call with ${currentPerson.name}`,{className});
+      const notify = () => toast(`Call with ${currentPerson.name}`);
       notify();
       setTimeline((prev) => [
         ...prev,
@@ -79,7 +79,7 @@ function PersonInformation({ params }) {
     }
   };
   return (
-    <div className="flex h-fit flex-col md:flex-row gap-2 p-2">
+    <div className="flex h-fit flex-col md:flex-row gap-2 p-2 my-20">
       {/* Left container */}
       <div className="flex flex-col gap-2">
         {/* Top container */}

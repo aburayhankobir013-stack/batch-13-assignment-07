@@ -2,7 +2,7 @@ import { FaPlus } from "react-icons/fa6";
 
 function HeroSection() {
   return (
-    <div className="text-center flex flex-col items-center gap-2 px-4 py-2 flex-none">
+    <div className="text-center flex flex-col items-center gap-2 px-4 py-2 flex-none mt-10">
       <h1 className="text-3xl font-bold tracking-tight text-slate-800 xl:text-4xl">
         Friends to keep close in your life
       </h1>
