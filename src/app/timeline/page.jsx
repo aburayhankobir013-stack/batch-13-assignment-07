@@ -5,7 +5,6 @@ import video from "../../assets/video.png";
 import Image from "next/image";
 import { useContext, useState } from "react";
 import timelineContex from "@/context/timelineContext";
-import { toast } from 'react-toastify';
 
 function TimelinePage() {
   const { timeline } = useContext(timelineContex);
