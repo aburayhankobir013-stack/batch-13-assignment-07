@@ -162,36 +162,6 @@ This project demonstrates real-world frontend development skills including dynam
   friends.json
 ```
 
----
-
-## ⚙️ Installation & Setup
-
-1️⃣ Clone the repository:
-
-```bash
-git clone <your-repo-link>
-```
-
-2️⃣ Go to project directory:
-
-```bash
-cd keenkeeper
-```
-
-3️⃣ Install dependencies:
-
-```bash
-npm install
-```
-
-4️⃣ Run the development server:
-
-```bash
-npm run dev
-```
-
----
-
 ## 📊 Challenge Features Implemented
 
 * ✅ Timeline filtering system
@@ -211,7 +181,7 @@ npm run dev
 
 ## 👨‍💻 Author
 
-**Your Name**
+Abu Rayhan Kobir
 
 ---
 
